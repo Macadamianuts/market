@@ -1,0 +1,53 @@
+{
+	"pages": [{
+		"path": "pages/home/home",
+		"style": {
+			"navigationBarTitleText": "旧街菜市场"
+		}
+	},
+	{
+		"path": "pages/car/car",
+		"style": {
+			"navigationBarTitleText": "购物车"
+		}
+	},
+	{
+		"path": "pages/my/my",
+		"style": {
+			"navigationBarTitleText": "我的"
+		}
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+	"tabBar": {
+		"color": "#8a8a8a",
+		"selectedColor": "#17abe3",
+		"list": [
+			{
+				"iconPath": "static/icon/home.png",
+				"selectedIconPath": "static/icon/home_selected.png",
+				"pagePath": "pages/home/home",
+				"text": "首页"
+			},
+			{
+				"iconPath": "static/icon/car.png",
+				"selectedIconPath": "static/icon/car_selected.png",
+				"pagePath": "pages/car/car",
+				"text": "购物车"
+			},
+			{
+				"iconPath": "static/icon/my.png",
+				"selectedIconPath": "static/icon/my_selected.png",
+				"pagePath": "pages/my/my",
+				"text": "我的"
+			}
+		]
+	}
+}
