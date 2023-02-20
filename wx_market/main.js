@@ -2,6 +2,7 @@
 // #ifndef VUE3
 import Vue from 'vue'
 import App from './App'
+import Request from './utils/request'
 
 Vue.config.productionTip = false
 
@@ -17,7 +18,7 @@ app.$mount()
 import { createSSRApp } from 'vue'
 import App from './App.vue'
 export function createApp() {
-  const app = createSSRApp(App)
+  const app = createSSRApp(App).use(request,Request)
   return {
     app
   }

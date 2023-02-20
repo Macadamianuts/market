@@ -21,7 +21,7 @@ const _sfc_main = {
 };
 var App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "G:/Project/market/wx_market/App.vue"]]);
 function createApp() {
-  const app = common_vendor.createSSRApp(App);
+  const app = common_vendor.createSSRApp(App).use(request, Request);
   return {
     app
   };
