@@ -3,6 +3,7 @@
 		"path": "pages/home/home",
 		"style": {
 			"navigationBarTitleText": "旧街菜市场"
+			
 		}
 	},
 	{
@@ -18,12 +19,12 @@
 		}
 	}],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8",
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "旧街菜市场",
+		"navigationBarBackgroundColor": "#2ECC71",
+		"backgroundColor": "#2ECC71",
 		"app-plus": {
-			"background": "#efeff4"
+			"background": "#2ECC71"
 		}
 	},
 	"tabBar": {

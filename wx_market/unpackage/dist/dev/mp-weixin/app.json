@@ -5,10 +5,10 @@
     "pages/my/my"
   ],
   "window": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "旧街菜市场",
+    "navigationBarBackgroundColor": "#2ECC71",
+    "backgroundColor": "#2ECC71"
   },
   "tabBar": {
     "color": "#8a8a8a",
