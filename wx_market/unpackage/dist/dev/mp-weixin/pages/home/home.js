@@ -35,6 +35,9 @@ const _sfc_main = {
     common_vendor.ref(false);
     common_vendor.ref("");
     common_vendor.ref("");
+    const goDetail = (id) => {
+      console.log("id", id);
+    };
     return (_ctx, _cache) => {
       return {
         a: common_vendor.o(_ctx.search),
@@ -71,7 +74,8 @@ const _sfc_main = {
           inverted: true,
           type: "warning"
         }),
-        l: common_vendor.p({
+        l: common_vendor.o(($event) => goDetail(_ctx.index)),
+        m: common_vendor.p({
           status: "more"
         })
       };
