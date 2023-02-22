@@ -16,6 +16,7 @@
 					<view class="shop-tips">商品详情</view>
 					<image class="shop-detail-img" src="https://img1.baidu.com/it/u=2390623652,2541224583&fm=253&fmt=auto&app=138&f=JPEG?w=216&h=384" mode="widthFix"></image>
 				</view>
+				<view class="known-box"></view>
 				<view class="shop-footer">
 					<uni-goods-nav :fill="true"  :options="goodsData.options" :buttonGroup="goodsData.buttonGroup"  @click="onClick" @buttonClick="buttonClick" />
 				</view>
@@ -109,10 +110,15 @@
 			}
 			.shop-footer {
 				width: 100%;
+				height: 100upx;
 				position: fixed;
 				bottom: -10upx;
 				height: 100upx;
 			}
 		}
+	}
+	.known-box {
+		width: 100%;
+		height: 100upx;
 	}
 </style>

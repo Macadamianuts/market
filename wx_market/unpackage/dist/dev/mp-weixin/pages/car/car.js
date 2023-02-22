@@ -12,6 +12,10 @@ const _sfc_main = {
   __name: "car",
   setup(__props) {
     const changeValue = common_vendor.ref(0);
+    const select = common_vendor.ref(false);
+    function selectCheckbox() {
+      select.value = !select.value;
+    }
     return (_ctx, _cache) => {
       return {
         a: common_vendor.f(10, (item, k0, i0) => {
@@ -19,7 +23,11 @@ const _sfc_main = {
             a: "69aa3c0c-0-" + i0
           };
         }),
-        b: common_vendor.o(changeValue.value)
+        b: select.value,
+        c: common_vendor.o(changeValue.value),
+        d: common_vendor.o(($event) => selectCheckbox()),
+        e: select.value,
+        f: common_vendor.o(($event) => selectCheckbox())
       };
     };
   }
