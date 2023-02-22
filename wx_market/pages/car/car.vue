@@ -77,6 +77,7 @@
 					top: 50%;
 					transform: translate(-50%,-50%);
 					margin: 0 auto;
+					clip: rect(6 15 15 6) !important;
 				}
 			}
 			&-left {
@@ -142,6 +143,7 @@
 		align-items: center;
 		justify-content: space-between;
 		color: #333;
+		padding: 0 12upx ;
 		.shop-middle {
 			display: flex;
 			.pay-shopping {
@@ -150,7 +152,7 @@
 				line-height: 80upx;
 				margin: 0 12upx;
 				text-align: center;
-				border-radius: 25upx;
+				border-radius: 25upx 0 0 25upx;
 				background: linear-gradient(to right, #F8C471, #E67E22);
 				color: #fff;
 			}

@@ -32,6 +32,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   margin: 0 auto;
+  clip: rect(6 15 15 6) !important;
 }
 .shop-card-list .shop-card-item-left {
   width: 23%;
@@ -94,6 +95,7 @@
   align-items: center;
   justify-content: space-between;
   color: #333;
+  padding: 0 12rpx;
 }
 .shop-msg-bottom .shop-middle {
   display: flex;
@@ -104,7 +106,7 @@
   line-height: 80rpx;
   margin: 0 12rpx;
   text-align: center;
-  border-radius: 25rpx;
+  border-radius: 25rpx 0 0 25rpx;
   background: linear-gradient(to right, #F8C471, #E67E22);
   color: #fff;
 }

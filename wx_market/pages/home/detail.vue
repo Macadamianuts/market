@@ -10,7 +10,7 @@
 				</view>
 				<view class="middle">
 					<text>月销600</text>
-					<text>积分500</text>
+					<text class="appraise">好评4.8</text>
 				</view>
 				<view class="shop-detail">
 					<view class="shop-tips">商品详情</view>
@@ -32,7 +32,12 @@
 		options: [{
 					icon: 'headphones',
 					text: '客服'
-				}, {
+				}, 
+				{
+					icon:'star',
+					text:'收藏'
+				},
+				{
 					icon: 'cart',
 					text: '购物车',
 					info: 2
@@ -60,6 +65,8 @@
 		}
 		&-box {
 			width: 100%;
+			background-color: #fff;
+			padding: 10upx 0;
 			.shop-title {
 				font-size: 38upx;
 				font-weight: 600;
@@ -72,7 +79,9 @@
 				-webkit-line-clamp: 2;			//行数
 				line-clamp: 2;					
 				-webkit-box-orient: vertical;	//盒子中内容竖直排列
+				padding: 8upx 0;
 			}
+			
 			.shop-price {
 				width: 98%;
 				display: flex;
@@ -80,26 +89,32 @@
 				align-items: center;
 				margin: 15upx auto ;
 				box-sizing: border-box;
+				padding: 8upx 0;
 				.price {
 					color: #f00;
-					font-size: 34upx;
+					font-size: 38upx;
+					font-weight: 600;
 				}
 			}
 			.middle {
-				width: 98%;
+				width: 97%;
 				display: flex;
 				color: #333;
 				font-size: 28upx;
 				margin: 12upx auto;
 				align-items: center;
 				justify-content: space-between;
+				.appraise {
+					color: #F39C12;
+					font-weight: 600;
+				}
 			}
 			.shop-detail {
 				.shop-tips {
 					width: 100%;
 					padding: 20upx 0;
 					text-align: center;
-					background-color: #f00;
+					background-color: #E74C3C;
 					color: #fff;
 				}
 				.shop-detail-img {
@@ -121,4 +136,5 @@
 		width: 100%;
 		height: 100upx;
 	}
+	
 </style>
