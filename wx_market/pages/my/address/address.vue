@@ -1,27 +1,31 @@
 <template>
 	<view class="address-page">
 		<view class="container">
-				<view class="oldaddress" v-for="(item,index) in cardInfo" :key="index">
-					<view class="topview">
-						<view class="name">{{item.username}}</view>
-						<view class="phone">{{item.phone}}</view>
+				<view class="oldaddress" v-for="(item,index) in cardInfo" :key="index" @click="selectCheckbox()">
+					<view class="address-checkbox">
+						<checkbox :checked="select" color="#D12C59" />
 					</view>
-					<view class="building">
-						{{item.address}}
-					</view>
-					<view class="editing">
-						<view class="default-tag" v-if="item.status == 0">
-							<uni-tag text="默认" type="success" size="normal" />
+					<view class="address-item">
+						<view class="topview">
+							<view class="name">{{item.username}}</view>
+							<view class="phone">{{item.phone}}</view>
 						</view>
-						<view class="address-btns">
-							<view class="word1">
-								<uni-icons  type="compose" size="25"></uni-icons>
-								编辑
+						<view class="building">
+							{{item.address}}
+						</view>
+						<view class="editing">
+							<view class="default-tag" v-if="item.status == 0">
+								<uni-tag text="默认" type="success" size="normal" />
 							</view>
-							
-							<view class="word">
-								<uni-icons  type="trash" size="25"></uni-icons>
-								删除
+							<view class="address-btns">
+								<view class="word1">
+									<uni-icons  type="compose" size="25"></uni-icons>
+									编辑
+								</view>
+								<view class="word">
+									<uni-icons  type="trash" size="25"></uni-icons>
+									删除
+								</view>
 							</view>
 						</view>
 					</view>
@@ -38,6 +42,12 @@
 			ref,
 			reactive
 		} from 'vue';
+		
+		const select = ref(false)
+		
+		function selectCheckbox(i) {
+			select.value =! select.value
+		}
 	
 		let cardInfo = reactive([{
 				username: '孔孝真',
@@ -96,30 +106,38 @@
 	}
 
 	.oldaddress {
-		width: 100vw;
-		// height: 300rpx;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		background-color: #fff;
-		padding: 5% 5% 2%;
+		padding: 12upx 12upx 8upx;
 		box-sizing: border-box;
-		margin: 3% 0 ;
-		.topview {
-			width: 100vw;
-
-			.name {
-				display: inline-block;
-				width: 40%;
-				font-size: 20px;
-				color: black;
+		margin: 12upx 0 ;
+		.address-checkbox {
+			width: 10%;
+		}
+		.address-item {
+			width: 90%;
+			.topview {
+				width: 100%;
+			
+				.name {
+					display: inline-block;
+					width: 40%;
+					font-size: 20px;
+					color: black;
+				}
+			
+				.phone {
+					display: inline-block;
+					width: 50%;
+					text-align: right;
+					font-size: 20px;
+					color: black;
+				}
+			
 			}
-
-			.phone {
-				display: inline-block;
-				width: 50%;
-				text-align: right;
-				font-size: 20px;
-				color: black;
-			}
-
 		}
 
 		.building {
