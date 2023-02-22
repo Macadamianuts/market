@@ -16,18 +16,11 @@
 			</view>
 		</view>
 		<view class="mode_list">
-			<view class="mode_item">
-				<text class="number">298</text>
-				<view class="text">收藏夹</view>
+			<view class="mode_item" v-for="mode in modeList.list" :key="mode.id" @click="modeDetail(mode.id)">
+				<text class="number">{{mode.val}}</text>
+				<view class="text">{{mode.text}}</view>
 			</view>
-			<view class="mode_item">
-				<text class="number">298</text>
-				<view class="text">积分</view>
-			</view>
-			<view class="mode_item">
-				<text class="number">2918</text>
-				<view class="text">浏览足迹</view>
-			</view>
+			
 		</view>
 		<view class="order_list">
 			<view class="order_item" @click="orderDetail(order.id)" v-for="order in orderList.list" :key="order.id">
@@ -65,6 +58,14 @@
 			{id: 3,url:"../../static/icon/order_wait.png", title:"待收货"},
 		]
 	})
+	
+	const modeList = reactive({
+		list:[
+			{id: 1, val: 200 , text:"收藏"},
+			{id: 2, val: 600 , text:"浏览足迹"},
+		]
+	})
+	
 	const featureList = reactive({
 		list:[
 			{id: 1, url:"../../static/feature/record.png", name:"浏览记录"},
@@ -86,6 +87,18 @@
 		uni.navigateTo({
 			url: `/pages/my/order/order?current=${id}`
 		})
+	}
+	
+	function modeDetail(id) {
+		if(id == 1) {
+			uni.navigateTo({
+				url: "/pages/my/collect"
+			})
+		} else {
+			uni.navigateTo({
+				url: '/pages/my/record/record'
+			})
+		}
 	}
 	
 	function modeUrl(id) {

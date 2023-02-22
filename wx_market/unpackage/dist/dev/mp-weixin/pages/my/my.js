@@ -19,6 +19,12 @@ const _sfc_main = {
         { id: 3, url: "../../static/icon/order_wait.png", title: "\u5F85\u6536\u8D27" }
       ]
     });
+    const modeList = common_vendor.reactive({
+      list: [
+        { id: 1, val: 200, text: "\u6536\u85CF" },
+        { id: 2, val: 600, text: "\u6D4F\u89C8\u8DB3\u8FF9" }
+      ]
+    });
     const featureList = common_vendor.reactive({
       list: [
         { id: 1, url: "../../static/feature/record.png", name: "\u6D4F\u89C8\u8BB0\u5F55" },
@@ -38,6 +44,17 @@ const _sfc_main = {
       common_vendor.index.navigateTo({
         url: `/pages/my/order/order?current=${id}`
       });
+    }
+    function modeDetail(id) {
+      if (id == 1) {
+        common_vendor.index.navigateTo({
+          url: "/pages/my/collect"
+        });
+      } else {
+        common_vendor.index.navigateTo({
+          url: "/pages/my/record/record"
+        });
+      }
     }
     function modeUrl(id) {
       if (id == 1) {
@@ -61,7 +78,15 @@ const _sfc_main = {
           type: "warning"
         }),
         b: common_vendor.o(($event) => myDetail()),
-        c: common_vendor.f(orderList.list, (order, k0, i0) => {
+        c: common_vendor.f(modeList.list, (mode, k0, i0) => {
+          return {
+            a: common_vendor.t(mode.val),
+            b: common_vendor.t(mode.text),
+            c: mode.id,
+            d: common_vendor.o(($event) => modeDetail(mode.id), mode.id)
+          };
+        }),
+        d: common_vendor.f(orderList.list, (order, k0, i0) => {
           return {
             a: order.url,
             b: common_vendor.t(order.title),
@@ -69,7 +94,7 @@ const _sfc_main = {
             d: order.id
           };
         }),
-        d: common_vendor.f(featureList.list, (feature, k0, i0) => {
+        e: common_vendor.f(featureList.list, (feature, k0, i0) => {
           return {
             a: feature.url,
             b: common_vendor.t(feature.name),

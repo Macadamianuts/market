@@ -6385,6 +6385,12 @@ const pages = [
     style: {
       navigationBarTitleText: "\u5730\u5740\u7BA1\u7406"
     }
+  },
+  {
+    path: "pages/my/collect",
+    style: {
+      navigationBarTitleText: "\u6211\u7684\u6536\u85CF"
+    }
   }
 ];
 const globalStyle = {

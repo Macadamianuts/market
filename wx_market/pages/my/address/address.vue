@@ -30,7 +30,6 @@
 						</view>
 					</view>
 				</view>
-				
 				<!-- 新增 -->
 				<button type="primary" plain="true" class="btn" @click="toadd">添加新地址</button>
 			</view>
