@@ -20,7 +20,7 @@
 				<view class="form-middle-item">
 					<view class="name">手机号</view>
 					<view class="input">
-						<input type="number" disabled="" maxlength="11"/>
+						<input type="number" disabled="true" value="13488888888" maxlength="11"/>
 					</view>
 				</view>
 				<view class="form-middle-item">

@@ -1,7 +1,7 @@
 <template>
 	<view class="oder_page">
 		<view class="uni-padding-wrap uni-common-mt">
-			<uni-segmented-control :current="current.value" :values="orderNav.items" :style-type="orderNav.styles"
+			<uni-segmented-control :current="current" :values="orderNav.items" :style-type="orderNav.styles"
 				:active-color="orderNav.colors" @clickItem="onClickItem" />
 		</view>
 		<view class="content">
@@ -27,7 +27,7 @@
 		console.log("eeeee",e)
 		if (current.value !== e.currentIndex) {
 			current.value = e.currentIndex
-		}
+		} 
 	}
 	onLoad((options) => {
 		current.value = parseInt(options.current)
