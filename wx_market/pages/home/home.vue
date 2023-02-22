@@ -33,7 +33,7 @@
 		</view>
 		<uni-section title="为你推荐" type="line"></uni-section>
 		<view class="home-card-list">
-			<view class="home-card-item" v-for="()item,index) in 3" @click="goDetail(index)">
+			<view class="home-card-item" v-for="(item,index) in 3" @click="goDetail(index)">
 				<view class="home-card-img">
 					<image src="https://img1.baidu.com/it/u=2390623652,2541224583&fm=253&fmt=auto&app=138&f=JPEG?w=216&h=384" mode="widthFix"></image>
 				</view>
@@ -72,6 +72,9 @@
 	
 	function goDetail(id){
 		console.log('id',id)
+		uni.navigateTo({
+			url: "/pages/home/detail"
+		})
 	}
 </script>
 

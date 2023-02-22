@@ -10,7 +10,7 @@
 					<view class="user_name">咿呀呀</view>
 					<uni-tag text="普通用户" type="warning" />
 				</view>
-				<view class="setting_btn">
+				<view class="setting_btn" @click="myDetail()">
 					<image src="../../static/icon/setting.png" mode="widthFix"></image>
 				</view>
 			</view>
@@ -30,7 +30,7 @@
 			</view>
 		</view>
 		<view class="order_list">
-			<view class="order_item" v-for="order in orderList.list" :key="order.id">
+			<view class="order_item" @click="orderDetail(order.id)" v-for="order in orderList.list" :key="order.id">
 				<view class="order_img">
 					<image :src="order.url" mode="widthFix"></image>
 				</view>
@@ -39,7 +39,7 @@
 		</view>
 		
 		<view class="feature_list">
-			<view class="feature_item" v-for="feature in featureList.list" :key="feature.id">
+			<view class="feature_item" v-for="feature in featureList.list" :key="feature.id" @click="modeUrl(feature.id)">
 				<view class="feature_message">
 					<view class="feature_img">
 						<image :src="feature.url"></image>
@@ -59,10 +59,10 @@
 	
 	const orderList = reactive({
 		list:[
-			{id: 1,url:"../../static/icon/order_list.png", title:"全部订单"},
-			{id: 2,url:"../../static/icon/order_pay.png", title:"待付款"},
-			{id: 3,url:"../../static/icon/order_waitPay.png", title:"待发货"},
-			{id: 4,url:"../../static/icon/order_wait.png", title:"待收货"},
+			{id: 0,url:"../../static/icon/order_list.png", title:"全部订单"},
+			{id: 1,url:"../../static/icon/order_pay.png", title:"待付款"},
+			{id: 2,url:"../../static/icon/order_waitPay.png", title:"待发货"},
+			{id: 3,url:"../../static/icon/order_wait.png", title:"待收货"},
 		]
 	})
 	const featureList = reactive({
@@ -75,6 +75,30 @@
 			{id: 6, url:"../../static/feature/logout.png", name:"退出登录"},
 		]
 	})
+	
+	function myDetail() {
+		uni.navigateTo({
+			url: '/pages/my/detail'
+		})
+	}
+	
+	function orderDetail(id) {
+		uni.navigateTo({
+			url: `/pages/my/order/order?current=${id}`
+		})
+	}
+	
+	function modeUrl(id) {
+		if(id == 1) {
+			uni.navigateTo({
+				url: '/pages/my/record/record'
+			})
+		} else if(id == 4) {
+			uni.navigateTo({
+				url: '/pages/my/feedback/feedback'
+			})
+		}
+	}
 </script>
 
 <style lang="scss">

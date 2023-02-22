@@ -17,7 +17,34 @@
 		"style": {
 			"navigationBarTitleText": "我的"
 		}
-	}],
+	},{
+		"path": "pages/home/detail"
+	},
+	{
+		"path": "pages/my/detail",
+		"style": {
+			"navigationBarTitleText": "我的信息"
+		}
+	},
+	{
+		"path": "pages/my/order/order",
+		"style": {
+			"navigationBarTitleText": "订单信息"
+		}
+	},
+	{
+		"path": "pages/my/feedback/feedback",
+		"style": {
+			"navigationBarTitleText": "意见反馈"
+		}
+	},
+	{
+		"path": "pages/my/record/record",
+		"style": {
+			"navigationBarTitleText": "历史浏览"
+		}
+	}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "旧街菜市场",

@@ -2,11 +2,16 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports[Symbol.toStringTag] = "Module";
 var common_vendor = require("./common/vendor.js");
-var utils_http = require("./utils/http.js");
+var utils_require = require("./utils/require.js");
 if (!Math) {
   "./pages/home/home.js";
   "./pages/car/car.js";
   "./pages/my/my.js";
+  "./pages/home/detail.js";
+  "./pages/my/detail.js";
+  "./pages/my/order/order.js";
+  "./pages/my/feedback/feedback.js";
+  "./pages/my/record/record.js";
 }
 const _sfc_main = {
   onLaunch: function() {
@@ -23,7 +28,7 @@ const _sfc_main = {
 var App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "G:/Project/market/wx_market/App.vue"]]);
 function createApp() {
   const app = common_vendor.createSSRApp(App);
-  app.config.globalProperties.$http = utils_http.http;
+  app.config.globalProperties.$http = utils_require.require;
   return {
     app
   };

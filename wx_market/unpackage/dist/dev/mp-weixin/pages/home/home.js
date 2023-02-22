@@ -35,9 +35,12 @@ const _sfc_main = {
     common_vendor.ref(false);
     common_vendor.ref("");
     common_vendor.ref("");
-    const goDetail = (id) => {
+    function goDetail(id) {
       console.log("id", id);
-    };
+      common_vendor.index.navigateTo({
+        url: "/pages/home/detail"
+      });
+    }
     return (_ctx, _cache) => {
       return {
         a: common_vendor.o(_ctx.search),
@@ -64,9 +67,10 @@ const _sfc_main = {
           title: "\u4E3A\u4F60\u63A8\u8350",
           type: "line"
         }),
-        j: common_vendor.f(3, (item, k0, i0) => {
+        j: common_vendor.f(3, (item, index, i0) => {
           return {
-            a: "3770cca0-7-" + i0
+            a: "3770cca0-7-" + i0,
+            b: common_vendor.o(($event) => goDetail(index))
           };
         }),
         k: common_vendor.p({
@@ -74,8 +78,7 @@ const _sfc_main = {
           inverted: true,
           type: "warning"
         }),
-        l: common_vendor.o(($event) => goDetail(_ctx.index)),
-        m: common_vendor.p({
+        l: common_vendor.p({
           status: "more"
         })
       };

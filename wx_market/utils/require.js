@@ -47,7 +47,7 @@ export const uploadFile = (filePath, header = {}) => {
             filePath,
             name: 'files',
             header,
-            timeout：5000,
+            timeout: 5000,
             success: (res) => {
                 let {data} = res
                 data = JSON.parse(data)

@@ -1,11 +1,11 @@
 <template>
-	<view>
+	<view class="address-page">
 		
 	</view>
 </template>
 
-<script setup>
+<script>
 </script>
 
-<style lang="scss">
+<style>
 </style>

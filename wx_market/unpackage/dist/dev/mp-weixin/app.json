@@ -2,7 +2,12 @@
   "pages": [
     "pages/home/home",
     "pages/car/car",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/home/detail",
+    "pages/my/detail",
+    "pages/my/order/order",
+    "pages/my/feedback/feedback",
+    "pages/my/record/record"
   ],
   "window": {
     "navigationBarTextStyle": "white",
