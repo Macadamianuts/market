@@ -93,11 +93,15 @@
 			uni.navigateTo({
 				url: '/pages/my/record/record'
 			})
+		} else if (id == 3) {
+			uni.navigateTo({
+				url: '/pages/my/address/address'
+			})
 		} else if(id == 4) {
 			uni.navigateTo({
 				url: '/pages/my/feedback/feedback'
 			})
-		}
+		} 
 	}
 </script>
 

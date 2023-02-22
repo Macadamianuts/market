@@ -6379,6 +6379,12 @@ const pages = [
     style: {
       navigationBarTitleText: "\u5386\u53F2\u6D4F\u89C8"
     }
+  },
+  {
+    path: "pages/my/address/address",
+    style: {
+      navigationBarTitleText: "\u5730\u5740\u7BA1\u7406"
+    }
   }
 ];
 const globalStyle = {
@@ -8588,3 +8594,4 @@ exports.resolveComponent = resolveComponent;
 exports.rn = rn;
 exports.s = s$1;
 exports.t = t$1;
+exports.unref = unref;

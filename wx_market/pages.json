@@ -43,6 +43,12 @@
 		"style": {
 			"navigationBarTitleText": "历史浏览"
 		}
+	},
+	{
+		"path": "pages/my/address/address",
+		"style": {
+			"navigationBarTitleText": "地址管理"
+		}
 	}
 	],
 	"globalStyle": {

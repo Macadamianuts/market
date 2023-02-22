@@ -44,6 +44,10 @@ const _sfc_main = {
         common_vendor.index.navigateTo({
           url: "/pages/my/record/record"
         });
+      } else if (id == 3) {
+        common_vendor.index.navigateTo({
+          url: "/pages/my/address/address"
+        });
       } else if (id == 4) {
         common_vendor.index.navigateTo({
           url: "/pages/my/feedback/feedback"

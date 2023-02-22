@@ -7,7 +7,8 @@
     "pages/my/detail",
     "pages/my/order/order",
     "pages/my/feedback/feedback",
-    "pages/my/record/record"
+    "pages/my/record/record",
+    "pages/my/address/address"
   ],
   "window": {
     "navigationBarTextStyle": "white",
