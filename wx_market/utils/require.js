@@ -1,4 +1,4 @@
-const BASE_URL = 'http:1270.0.01:8888/api'
+const BASE_URL = 'http://1270.0.1:8888'
 
 /**
  * 请求

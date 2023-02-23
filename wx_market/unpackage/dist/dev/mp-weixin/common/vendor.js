@@ -1552,7 +1552,7 @@ function populateParameters(fromRes, toRes) {
   let _SDKVersion = SDKVersion;
   const hostLanguage = language.replace(/_/g, "-");
   const parameters = {
-    appId: "__UNI__C613E87",
+    appId: "wx2b5d11ac2da14b85",
     appName: "wx_market",
     appVersion: "1.0.0",
     appVersionCode: "100",
@@ -1695,7 +1695,7 @@ const getAppBaseInfo = {
       hostName: _hostName,
       hostSDKVersion: SDKVersion,
       hostTheme: theme,
-      appId: "__UNI__C613E87",
+      appId: "wx2b5d11ac2da14b85",
       appName: "wx_market",
       appVersion: "1.0.0",
       appVersionCode: "100",
@@ -5562,6 +5562,10 @@ function stringify(styles) {
   }
   return ret;
 }
+function setRef(ref2, id, opts = {}) {
+  const { $templateRefs } = getCurrentInstance();
+  $templateRefs.push({ i: id, r: ref2, k: opts.k, f: opts.f });
+}
 const o$1 = (value, key) => vOn(value, key);
 const f$1 = (source, renderItem) => vFor(source, renderItem);
 const s$1 = (value) => stringifyStyle(value);
@@ -5569,6 +5573,7 @@ const e = (target, ...sources) => extend(target, ...sources);
 const n$1 = (value) => normalizeClass(value);
 const t$1 = (val) => toDisplayString(val);
 const p$1 = (props) => renderProps(props);
+const sr = (ref2, id, opts) => setRef(ref2, id, opts);
 function createApp$1(rootComponent, rootProps = null) {
   rootComponent && (rootComponent.mpType = "app");
   return createVueApp(rootComponent, rootProps).use(plugin);
@@ -6660,7 +6665,7 @@ switch (f) {
 const p = h({}.UNICLOUD_DEBUG), m = h("[]");
 let _ = "";
 try {
-  _ = "__UNI__C613E87";
+  _ = "wx2b5d11ac2da14b85";
 } catch (e2) {
 }
 let w = {};
@@ -8599,5 +8604,6 @@ exports.ref = ref;
 exports.resolveComponent = resolveComponent;
 exports.rn = rn;
 exports.s = s$1;
+exports.sr = sr;
 exports.t = t$1;
 exports.unref = unref;

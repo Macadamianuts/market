@@ -5,3 +5,11 @@ export function getSwiperList(data) {
 		data
 	})
 }
+
+export function Login(data) {
+	return request({
+		url:'/wechat/analysis',
+		methods: 'POST',
+		data
+	})
+}

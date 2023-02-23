@@ -6,6 +6,8 @@
     },
     "setting": {
         "urlCheck": false,
+        "es6": true,
+        "minified": true,
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
@@ -13,8 +15,8 @@
         }
     },
     "compileType": "miniprogram",
-    "libVersion": "2.30.0",
-    "appid": "touristappid",
+    "libVersion": "",
+    "appid": "wx2b5d11ac2da14b85",
     "projectname": "wx_market",
     "condition": {},
     "editorSetting": {
