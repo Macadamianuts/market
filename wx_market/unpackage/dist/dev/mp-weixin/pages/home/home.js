@@ -1,5 +1,7 @@
 "use strict";
 var common_vendor = require("../../common/vendor.js");
+var utils_api = require("../../utils/api.js");
+require("../../utils/require.js");
 if (!Array) {
   const _easycom_uni_search_bar2 = common_vendor.resolveComponent("uni-search-bar");
   const _easycom_uni_grid_item2 = common_vendor.resolveComponent("uni-grid-item");
@@ -27,11 +29,15 @@ const _sfc_main = {
       interval: 2e3,
       duration: 500
     });
-    const swiperList = common_vendor.ref([
-      "https://img2.baidu.com/it/u=573255891,3781003769&fm=253&fmt=auto&app=138&f=JPEG?w=1250&h=500",
-      "https://img1.baidu.com/it/u=3878505612,1891851307&fm=253&fmt=auto&app=138&f=JPEG?w=1250&h=500",
-      "https://img0.baidu.com/it/u=3809117071,2668689623&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=172"
-    ]);
+    const swiperList = common_vendor.reactive([]);
+    const getBannerList = async () => {
+      const res = await utils_api.getBanner();
+      if (res.code === 0) {
+        swiperList.push(...res.data.list);
+        console.log("res", res);
+      }
+    };
+    getBannerList();
     common_vendor.ref(false);
     common_vendor.ref("");
     common_vendor.ref("");
@@ -50,9 +56,10 @@ const _sfc_main = {
           clearButton: "auto",
           cancelButton: "none"
         }),
-        c: common_vendor.f(swiperList.value, (swiper, k0, i0) => {
+        c: common_vendor.f(swiperList, (swiper, index, i0) => {
           return {
-            a: swiper
+            a: swiper.url,
+            b: index
           };
         }),
         d: swiperOption.indicatorDots,

@@ -6,9 +6,9 @@
 		<view class="uni-margin-wrap">
 			<swiper class="swiper" circular :indicator-dots="swiperOption.indicatorDots" :autoplay="swiperOption.autoplay" :interval="swiperOption.interval"
 				:duration="swiperOption.duration">
-				<swiper-item v-for="swiper in swiperList">
+				<swiper-item v-for="(swiper,index) in swiperList" :key="index">
 					<view class="swiper-item">
-						<image :src="swiper" mode="widthFix"></image>
+						<image :src="swiper.url" mode="widthFix"></image>
 					</view>
 				</swiper-item>
 				
@@ -54,18 +54,25 @@
 </template>
 
 <script setup>
-	import { reactive, ref } from 'vue'
+	import { reactive, ref, onMounted } from 'vue'
+	import {getBanner} from '@/utils/api.js'
 	const swiperOption = reactive({
 		indicatorDots: false,
 		autoplay: true,
 		interval: 2000,
 		duration: 500
 	})
-	const swiperList = ref([
-			'https://img2.baidu.com/it/u=573255891,3781003769&fm=253&fmt=auto&app=138&f=JPEG?w=1250&h=500',
-			'https://img1.baidu.com/it/u=3878505612,1891851307&fm=253&fmt=auto&app=138&f=JPEG?w=1250&h=500',
-			'https://img0.baidu.com/it/u=3809117071,2668689623&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=172',
-	])
+	const swiperList = reactive([])
+	
+	const getBannerList = async () =>{
+		const res = await getBanner()
+		if(res.code === 0) {
+			swiperList.push(...res.data.list)
+			console.log("res",res)
+		}
+	}
+	getBannerList()
+	
 	const more = ref(false)
 	const searchValue = ref('')
 	const noVal = ref('')

@@ -90,7 +90,7 @@ jwt:
   buffer-time: 1d
   issuer: qmPlus
 local:
-  path: uploads/file
+  path: http://127.0.0.1:8888/uploads/file
   store-path: uploads/file
 mssql:
   path: ""

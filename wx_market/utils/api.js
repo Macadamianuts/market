@@ -1,15 +1,12 @@
-export function getSwiperList(data) {
-	return request({
-		url: '/api/v1/testPaper/findByParam',
-		method: 'GET',
-		data
-	})
-}
+import {require} from '@/utils/require.js'
 
-export function Login(data) {
-	return request({
-		url:'/wechat/analysis',
-		methods: 'POST',
-		data
+export const getBanner = () =>{
+	return require({
+		url:'/banner/getBannerList',
+		method: 'GET',
+		data:{
+			page: 1,
+			pageSize: 5
+		}
 	})
 }

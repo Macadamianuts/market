@@ -68,8 +68,8 @@
     <el-dialog v-model="dialogFormVisible" :before-close="closeDialog" title="弹窗操作">
       <el-form :model="formData" label-position="right" ref="elFormRef" :rules="rule" label-width="180px">
         <el-form-item label="轮播图图片地址:"  prop="url" >
-          <el-button type="primary" @click="openChooseImg">点击上传</el-button>
-          <ChooseImg ref="chooseImgRef" @enter-img="enterImg" />
+          <el-button  @click="openChooseImg">选择图片</el-button>
+          <ChooseImg ref="chooseImgRef" @enterImg="enterImg"></ChooseImg>
           <el-input v-model="formData.url" disabled/>
         </el-form-item>
         <el-form-item label="轮播图介绍:"  prop="description" >
@@ -115,6 +115,7 @@ import { ref, reactive } from 'vue'
 const chooseImgRef = ref()
 
 const enterImg = (url) =>{
+  console.log(url)
   formData.value.url = url
 }
 

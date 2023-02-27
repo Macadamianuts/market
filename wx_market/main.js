@@ -16,10 +16,8 @@ app.$mount()
 // #ifdef VUE3
 import { createSSRApp } from 'vue'
 import App from './App.vue'
-import require from './utils/require'
 export function createApp() {
   const app = createSSRApp(App)
-  app.config.globalProperties.$http=require
   return {
     app
   }
