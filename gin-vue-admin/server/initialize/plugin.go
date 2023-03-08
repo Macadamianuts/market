@@ -2,6 +2,7 @@ package initialize
 
 import (
 	"fmt"
+	"github.com/flipped-aurora/gin-vue-admin/server/plugin/banner"
 	"github.com/flipped-aurora/gin-vue-admin/server/plugin/wechat"
 
 	"github.com/flipped-aurora/gin-vue-admin/server/middleware"
@@ -24,5 +25,6 @@ func InstallPlugin(Router *gin.Engine) {
 	PrivateGroup.Use(middleware.JWTAuth()).Use(middleware.CasbinHandler())
 	//  添加跟角色挂钩权限的插件 示例 本地示例模式于在线仓库模式注意上方的import 可以自行切换 效果相同
 	PluginInit(PublicGroup, wechat.Plugin)
+	PluginInit(PrivateGroup, banner.Plugin)
 
 }
